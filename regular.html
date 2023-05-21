@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Mock</title>
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Registration Form </h1>
+    <form action="" onsubmit=" return mock()">
+        
+        <div>user id : <input type="text"></div>
+        <p class="ERROR"></p>
+
+    
+            
+           <input type="submit" value="SUBMIT">
+
+
+        </form>
+    
+    <script> 
+    
+    
+    function mock(){
+            var userid=/^[a-zA-Z0-9]{5,12}$/                //regx 101
+            var input=document.getElementsByTagName("input")
+            var error=document.getElementsByClassName("ERROR")
+
+            if(userid.test(input[0].value)){
+                error[0].innerHTML=""
+            }
+            else{
+                error[0].innerHTML="username must have 5-12 character"
+                error[0].style.color="red"
+                return false;
+            }
+
+        // function submit()
+        // {
+        //     var userid=/^(?=.[a-z])(?=.[A-Z])(?=.*[0-9])[a-zA-Z0-9!@#$%^]{3,}$/    
+        //     var input=document.getElementsByTagName("input")
+        //     var error=document.getElementsByClassName("error")
+           
+        //     if(userid.test(input[0].value))
+        //     {
+        //         error[0].innerHTML=""
+        //     }           
+        //     else
+        //     {
+        //         error[0].innerHTML="User ID must contain 5 to 12 Character"
+        //         error[0].style.color="red" 
+        //         return false;
+        //     }
+ 
+            
+        }
+        
+       
+
+
+
+    </script>
+   
+</body>
+</html>

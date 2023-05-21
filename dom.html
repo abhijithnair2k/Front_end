@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+
+            border: 2px solid;
+            background-color: rgb(133, 133, 85);
+            text-align: center;
+            width: 50%;
+            margin: auto;
+            height: 150px;
+            line-height: 150px;
+            font-style: italic;
+            box-shadow: 12px 12px 5px darkgray; 
+            color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading"> CLOCK </h1>
+    <center>
+        <button onclick="setInterval(get_time,1000)">display time</button>
+    </center>
+    <script>
+       
+        function get_time()
+        {
+            var x=new Date()
+            console.log(x)
+            var h=x.getHours()
+            var m=x.getMinutes()
+            var s=x.getSeconds()
+            var tag=document.getElementById("heading")
+            tag.innerHTML="current time is =>"+h+":"+m+":"+s
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="index3.html" onsubmit="return vali()">
+
+        <fieldset>
+
+            <legend>fill the form</legend>
+
+            <p>Username <input type="text"></p>
+            <h3 id="username"></h3>
+
+            <p>Email <input type="email"></p>
+            <h3 id="email"></h3>
+
+            <p>password <input type="password"></p>
+
+            <p>Confirm password <input type="password"></p>
+
+            <p>
+                <input type="checkbox" id="agree">
+                <label for="agree">I agree terms and condition</label>
+            </p>
+
+            <input type="submit" value="Register" id="register" disabled>
+
+        </fieldset>
+
+    </form>
+    <script>
+        var input=document.getElementsByTagName("input")
+        function vali()
+        {
+            if(input[0].value!="Dashwath")
+            {
+                let x=document.getElementById("username")
+                x.innerHTML="username is invalid"
+                x.style.color="red"
+                return false;
+            }
+            else if(input[1].value!="daswath123@gmail.com")
+            {
+                let x=document.getElementById("email")
+                x.innerHTML="invalid email"
+                x.style.color="red"
+                return false;
+            }
+        }
+
+        var agree=document.getElementById("agree")
+        agree.addEventListener('change', function()
+        {
+            let register=document.getElementById("register")
+            if(agree.checked)
+            {
+                register.removeAttribute("disabled")
+            }
+            else{
+                register.setAttribute("disabled","disabled")
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="" onsubmit=" return mock()">
+        
+        <div>user id : <input type="text"></div>
+        <p class="ERROR"></p>
+
+        <div>password : <input type="password"></div>
+        <p class="ERROR"></p>
+    </tr>
+        <div>Name : <input type="text"></div>
+        <p class="ERROR"></p>
+
+        <div>Address : <input type="text"></div>
+        <p class="ERROR"></p>
+        <div>
+            <tr>
+                <td>
+                    <label for="">Country</label>
+                </td>
+            <td>
+                <select >
+            <option value="">IND</option>   
+            <option value="">END</option>
+            <option value="">SRI</option>
+            <option value="">AUS</option>
+            <option value="">Dubai</option>
+            
+            
+                </select>
+            </td>
+            
+            </tr>
+            <br><br>
+
+            <div>ZIP Code: <input type="number"></div>
+            <p class="ERROR"></p>
+        
+        <div>email : <input type="email"></div>
+        <p class="ERROR"></p>
+       
+        <div>
+            <tr>
+
+                <td> 
+                    <label for="">Sex</label>
+                </td>
+                <td>
+                    <input type="radio" name="a">
+                    <label for=""> Male</label>
+                    <input type="radio" name="a">
+                    <label for="">Female</label>
+                </td>
+                </tr>
+                
+        </div>
+        <div>
+            <tr>
+                <td>
+                    <label for="">Languages</label>
+                </td> 
+                <td>
+                    <input type="checkbox">
+                    <label for="">English</label>
+                    </td> 
+                    <td>
+                    <input type="Checkbox">
+                    <label for="">Non English</label><br>
+                </td>
+                
+                </tr>
+                
+        </div>
+        <div> About: <input type="text"></div>
+        <p class="ERROR"></p>
+
+        <div><input type="submit" value="SUBMIT"></div>
+        <p class="ERROR"></p>
+
+    </form>
+    <script>
+        function mock(){
+            var userid=/^[a-zA-Z0-9]{5,12}$/                //regx 101
+            var input=document.getElementsByTagName("input")
+            var error=document.getElementsByClassName("ERROR")
+
+            if(userid.test(input[0].value)){
+                error[0].innerHTML=""
+            }
+            else{
+                error[0].innerHTML="username must have 5-12 character"
+                error[0].style.color="red"
+                return false;
+            }
+
+            var password=/^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?=.*[!@$#%^&*])[a-zA-Z0-9!@$#%^&*]{7,12}$/
+            if(password.test(input[1].value)){
+                error[1].innerHTML=""
+            }
+            else{
+                error[1].innerHTML="must have length of 7-12"
+                error[1].style.color="red"
+                return false;
+            }
+            var Name=/^[a-zA-Z]{5,}$/                //regx 101
+            var input=document.getElementsByTagName("input")
+            var error=document.getElementsByClassName("ERROR")
+
+            if(Name.test(input[2].value)){
+                error[2].innerHTML=""
+            }
+            else{
+                error[2].innerHTML="Required and Alphabets Only"
+                error[2].style.color="red"
+                return false;
+            }
+            var Zipcode=/^[0-9]{6,9}$/                //regx 101
+            var input=document.getElementsByTagName("input")
+            var error=document.getElementsByClassName("ERROR")
+
+            if(Zipcode.test(input[4].value)){
+                error[4].innerHTML=""
+            }
+            else{
+                error[4].innerHTML="must be number"
+                error[4].style.color="red"
+                return false;
+            }
+
+
+            var email=/^[a-zA-Z0-9]{4,}@[A-Za-z]{3,}.[a-zA-Z]{2,}$/
+            if(email.test(input[5].value))
+            {
+                error[5].innerHTML=""
+            }
+            else{
+                error[5].innerHTML="must be a valid email"
+                error[5].style.color="red"
+                return false; 
+            }
+
+        
+            
+        }
+    </script>
+</body>
+</html>

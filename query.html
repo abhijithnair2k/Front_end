@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document Object model</h1>
+    <h1 id="js">Java Script</h1>
+    <h1 class="fw">Spring</h1>
+    <h1 class="fw"> Hibernet</h1>
+
+    <script>
+        var ele1=document.querySelector("h1,#js,.fw");
+        var ele2=document.querySelector("#js,h1,.fw");
+        var ele3=document.querySelector(".fw,h1,#js");
+
+        console.log(ele1);
+        console.log(ele2);
+        console.log(ele3);
+
+        var ele1=document.querySelector(".fw");
+        var ele2=document.querySelector("h1");
+        var ele3=document.querySelector("#js");
+
+        console.log(ele1);
+        console.log(ele2);
+        console.log(ele3);
+       
+
+        //fetching alla data with respectve to tag name
+        var ele1=document.querySelectorAll("h1");
+        console.log(ele1);
+
+        // fetching data using id
+        var ele2=document.querySelectorAll("#js");
+        console.log(ele2);
+
+        // fetching data using class name
+        var ele3=document.querySelectorAll(".fw");
+        console.log(ele3);
+
+
+
+
+    </script>
+</body>
+</html>

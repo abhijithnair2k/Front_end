@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="red"> DOM </h1>
+    <h1> HTML </h1>
+    <h1 class="red">REACT</h1>
+    <h1 id="green">mongo db</h1>
+    <h1 class="red"> metero</h1>
+    <button  onclick="font()"> click</button>
+     <script>
+        function font()
+        {
+            // var x=document.getElementsByTagName("h1");
+            console.log(x);
+
+            for(let i=0;i<=5;i++)
+             {
+                x[i].style.color="blue";
+                x[i].style.border="2px solid red";
+                x[i].style.textAlign="center";
+                x[i].style.fontStyle="italic";
+            }
+
+            var y =document.getElementsByClassName("red");
+            console.log(y);
+            for(let i=0;i<=2;i++)
+            {
+                y[i].style.border="2px solid red";
+                y[i].style.textAlign="center";
+                y[i].style.fontStyle="italic"
+            }
+
+           var z=document.getElementById("green");
+           console.log(z);
+           {
+           
+            for(let i=0;i<=2;i++)
+            z[i].style.color="green";
+           
+            
+           }
+
+        }
+         
+
+            
+         
+     </script>
+    
+</body>
+</html>

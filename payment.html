@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">payment</button>
+    <script>
+        function googlepay()
+        {
+            alert("google pay")
+        }
+        function phonepay()
+        {
+            alert("phone pay")
+        }
+        function amazonepay()
+        {
+            alert("amazone pay")
+        }
+
+        var button=document.getElementById("btn")
+        button.addEventListener("click",()=>alert("googlepay"))
+        button.addEventListener("click",()=>alert("phonepay"))
+        button.addEventListener("click",()=>alert("amazonepay"))
+    </script>
+</body>
+</html>

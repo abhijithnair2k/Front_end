@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="take">
+        <li id="qq"> Java</li>
+        <li id="ww">SQL</li>
+        <li id="ee">JS</li>
+        <li id="rr">HTML</li>
+    </ul>
+    <script>
+       var a= document.createElement("li")
+       a.textContent="React js"
+       var b=document.createElement("li")
+       b.textContent="Angular JS"
+       var c=document.createElement("li")
+       c.textContent="Metero JS"
+       var d= document.createElement("li")
+       d.textContent="node Js"
+        
+       a.style.color="blue"
+       b.style.color="blue"
+       c.style.color="blue"
+       d.style.color="blue"
+
+       var ul=document.getElementById("take")
+       var sql=document.getElementById("ww")
+       var js=document.getElementById("ee")
+       var html=document.getElementById("rr")
+       ul.insertBefore(a,sql)
+       ul.insertBefore(b,js)
+       ul.insertBefore(c,html)
+       ul.append(d)
+       
+       
+    </script>
+</body>
+</html>

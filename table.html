@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myinput{
+            width: 100%;
+        }
+        #mytable{
+            width: 70%;    
+            background-color: azure;
+            border: 2px solid red;
+        }
+        .header{
+            width: 500px;
+            background-color: red;
+            text-align: center;
+        }
+
+        tr{
+            width: 500px;
+            border: 2px solid red;
+            text-align: center;
+        }
+         td{
+            width: 500px;
+            border: 2px solid rgb(0, 21, 255);
+            text-align: center;
+            color: rgb(0, 21, 255);
+
+         }
+
+
+    </style>
+</head>
+<body>
+    <input type="text" id="myinput" placeholder="names.." onkeyup="display()">
+    <br><br><br>
+    <table id="mytable">
+        <tr class="header">
+            <th>name</th>
+            <th>degree</th>
+            <th>profession</th>
+        </tr>
+        <tr>
+            <td>Harsha</td>
+            <td>BE</td>
+            <td>front end developer</td>
+            </tr>
+            <tr>
+                <td>Abhijith</td>
+                <td>BE</td>
+                <td>front end  developer</td>
+            </tr>
+        <tr>
+            <td>Ebin</td>
+            <td>BE</td>
+            <td>front end developer</td>
+        </tr>
+        <tr>
+            <td>Ajith</td>
+            <td>BE</td>
+            <td>back end developer</td>
+        </tr>
+        <tr>
+            <td>suriya</td>
+            <td>BE</td>
+            <td>Fornt end developer</td>
+        </tr>
+    </table>
+    <script>
+       
+       function display()
+       {
+        filter=document.getElementById("myinput").value.toUpperCase()
+        table=document.getElementById("mytable")
+        tablerow=table.getElementsByTagName('tr')
+
+        for(i=1;i<tablerow.length;i++)
+        {
+            tabledata=tablerow[i].getElementsByTagName('td')[0]
+            if(tabledata)
+            {
+                data=tabledata.textContent||tabledata.innerHTML
+                if(data.toUpperCase().indexOf(filter)>-1)
+                {
+                    tablerow[i].style.display=""
+                }
+                else
+                {
+                    tablerow[i].style.display="none"
+                }
+            }
+        }
+       }
+
+    </script>
+</body>
+</html>

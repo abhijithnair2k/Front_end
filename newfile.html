@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="blue">1.Java</h1>
+    <h1 class="orange">2.Java-Script</h1>
+    <h1 class="orange">3.Spring</h1>
+    <h1 class="orange">4.React</h1>
+    <h1 id="">5.HTML</h1>
+    <button onclick="color()"> Display</button>
+
+    <script>        
+        function color()
+        {
+            var ele=document.getElementsByClassName("orange");
+            console.log(ele);
+             
+
+
+             for(let i=0;i<=2;i++)
+            {
+                ele[i].style.color="orange";
+                ele[i].style.border="2px dotted green";
+                ele[i].style.textAlign="center";
+                ele[i].style.fontStyle="italic";
+            }
+        }
+    </script>
+
+</body>
+</html>

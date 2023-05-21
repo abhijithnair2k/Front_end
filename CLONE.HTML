@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li>Java</li>
+        <li>J2ee</li>
+        <li id="li">React-js</li>
+        <li>Node js</li>
+        <li>Spring</li>
+    </ul>
+    <button onclick="y()">Add</button>
+    <button onclick="x()">Remove</button>
+    <button onclick="c()">Remove red</button>
+    <script>
+        function x(){
+            var ul=document.getElementById("ul")
+            var li=document.getElementById("li")
+            ul.removeChild(li)
+        }
+        function y()
+        {
+            var ul = document.getElementById("ul")
+            var x=document.createElement("li")
+            x.id="rdx"
+            x.textContent="ReducJS"
+            ul.appendChild(x);
+            
+        }
+        function c()
+        {
+            var z= document.getElementById("rdx")
+            var ul = document.getElementById("ul")
+            ul.removeChild(z) 
+        }
+    </script>
+</body>
+</html>

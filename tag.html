@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    // using java script we create html tag in this..
+   <script>
+
+    // creating html element..
+    var tag= document.createElement("h1");
+
+    //creating text to the created element..
+    tag.textContent="DOM";
+
+    //add selector..
+    tag.id="heading"
+
+    //add css to the created element..
+    tag.style.color="red"
+
+    console.log(tag);
+    //addind one element inside another element..
+    document.body.appendChild(tag);
+
+ var div=document.createElement("div");
+ div.innerHTML="i am div tag";
+ div.className="box"
+ div.style.border= "4px dotted red"
+ div.style.fontSize="100px"
+
+ console.log(div);
+
+    //  document.write(div);
+document.body.appendChild(div); // can connect the tag we provide on js to the body using appendchild tag..
+
+
+   </script> 
+</body>
+</html>
